@@ -1,0 +1,255 @@
+/* GitHub Portfolio Analyzer — Dark glassmorphism theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    background-color: #0a0a1a;
+    color: #e2e2f0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0a0a1a; }
+::-webkit-scrollbar-thumb { background: rgba(124,58,237,0.5); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(124,58,237,0.8); }
+
+/* ── Tabs ── */
+.custom-tabs .tab {
+    background: rgba(18,18,42,0.6) !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    border-radius: 8px 8px 0 0 !important;
+    color: #6b7280 !important;
+    font-weight: 500 !important;
+    padding: 10px 20px !important;
+    transition: all 0.2s ease !important;
+    margin-right: 4px !important;
+}
+
+.custom-tabs .tab:hover {
+    color: #e2e2f0 !important;
+    background: rgba(124,58,237,0.2) !important;
+}
+
+.custom-tabs .tab--selected {
+    background: rgba(124,58,237,0.25) !important;
+    border-bottom-color: transparent !important;
+    color: #a78bfa !important;
+    border-top: 2px solid #7c3aed !important;
+}
+
+.custom-tabs .tab-content {
+    background: rgba(18,18,42,0.95) !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    border-radius: 0 8px 8px 8px !important;
+    padding: 20px !important;
+}
+
+/* ── Cards ── */
+.stat-card {
+    background: rgba(18,18,42,0.95);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 20px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.stat-card:hover {
+    border-color: rgba(124,58,237,0.4);
+    transform: translateY(-2px);
+}
+
+/* ── Language badges ── */
+.lang-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    margin: 2px 3px;
+    white-space: nowrap;
+    cursor: default;
+}
+
+/* ── Topic chips ── */
+.topic-chip {
+    display: inline-block;
+    background: rgba(124,58,237,0.2);
+    border: 1px solid rgba(124,58,237,0.4);
+    border-radius: 20px;
+    color: #a78bfa;
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    margin: 2px 3px;
+    white-space: nowrap;
+}
+
+/* ── Profile header ── */
+.profile-header {
+    background: rgba(18,18,42,0.95);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.profile-avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    border: 3px solid rgba(124,58,237,0.6);
+    object-fit: cover;
+}
+.profile-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #e2e2f0;
+    margin: 0 0 4px 0;
+}
+.profile-handle {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin: 0 0 8px 0;
+}
+.profile-bio {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    margin: 0;
+    max-width: 560px;
+}
+
+/* ── Streak display ── */
+.streak-box {
+    background: rgba(34,197,94,0.08);
+    border: 1px solid rgba(34,197,94,0.3);
+    border-radius: 10px;
+    padding: 16px 24px;
+    text-align: center;
+}
+.streak-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #22c55e;
+    line-height: 1;
+    margin: 0;
+}
+.streak-label {
+    font-size: 0.78rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 4px 0 0 0;
+}
+
+/* ── Input / search ── */
+input[type="text"] {
+    background: rgba(18,18,42,0.95) !important;
+    border: 1px solid rgba(255,255,255,0.12) !important;
+    border-radius: 8px !important;
+    color: #e2e2f0 !important;
+    padding: 10px 16px !important;
+    font-size: 0.95rem !important;
+    outline: none !important;
+    transition: border-color 0.2s ease !important;
+    width: 100% !important;
+}
+input[type="text"]:focus {
+    border-color: rgba(124,58,237,0.6) !important;
+    box-shadow: 0 0 0 3px rgba(124,58,237,0.12) !important;
+}
+
+/* ── Buttons ── */
+button.analyze-btn {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    padding: 10px 28px !important;
+    cursor: pointer !important;
+    transition: opacity 0.2s ease !important;
+}
+button.analyze-btn:hover { opacity: 0.88 !important; }
+
+/* ── Divider ── */
+hr {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    margin: 20px 0;
+}
+
+/* ── Loading overlay ── */
+._dash-loading {
+    background: rgba(10,10,26,0.7) !important;
+}
+._dash-loading-callback {
+    background: transparent !important;
+}
+
+/* ── Compare table ── */
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+}
+.compare-table th {
+    color: #6b7280;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 8px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    text-align: left;
+}
+.compare-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    color: #e2e2f0;
+}
+.compare-table tr:last-child td { border-bottom: none; }
+.compare-table tr:hover td { background: rgba(124,58,237,0.06); }
+
+/* ── Landing page ── */
+.landing-hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+.landing-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #a78bfa, #7c3aed, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0 0 12px 0;
+    line-height: 1.2;
+}
+.landing-subtitle {
+    font-size: 1.05rem;
+    color: #6b7280;
+    margin: 0 auto 36px;
+    max-width: 480px;
+}
+
+/* ── Error banner ── */
+.error-banner {
+    background: rgba(239,68,68,0.12);
+    border: 1px solid rgba(239,68,68,0.4);
+    border-radius: 8px;
+    color: #fca5a5;
+    font-size: 0.9rem;
+    padding: 12px 20px;
+    margin-bottom: 16px;
+}
+
+/* ── Responsive tweaks ── */
+@media (max-width: 768px) {
+    .profile-header { flex-direction: column; text-align: center; }
+    .landing-title  { font-size: 1.8rem; }
+}
